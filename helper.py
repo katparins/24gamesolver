@@ -110,3 +110,29 @@ def final_result_division_right(operation, a, b, c):
         except ZeroDivisionError:
             final_result = -1
     return final_result
+
+def get_second_result_middle(operator, operator2, nested_list, first_result, num1, num2, print_func):
+    if operator2 == "+":
+        second_result = num1 + num2
+        for operator3 in operators:
+            final_result = get_final_result(operator3, first_result, second_result)
+            print_func(final_result, nested_list, operator, operator2, operator3)
+
+    elif operator2 == "-":
+        second_result = num1 - num2
+        for operator3 in operators:
+            final_result = get_final_result(operator3, first_result, second_result)
+            print_func(final_result, nested_list, operator, operator2, operator3)
+
+    elif operator2 == "*":
+        second_result = num1 * num2
+        for operator3 in operators:
+            final_result = get_final_result(operator3, first_result, second_result)
+            print_func(final_result, nested_list, operator, operator2, operator3)
+
+    elif operator2 == "/":
+        numerator = num1
+        denominator = num2
+        for operator3 in operators:
+            final_result = final_result_division_right(operator3, numerator, denominator, first_result)
+            print_func(final_result, nested_list, operator, operator2, operator3)

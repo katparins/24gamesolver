@@ -1,6 +1,7 @@
 from math import *
 import random
 from helper import *
+from print_func import *
 
 lst = []
 
@@ -43,55 +44,7 @@ while random_times <= cases:
         random_list.append(lst[:])
         random_times += 1
 
-def get_second_result_middle(operator, operator2, nested_list, num1, num2, print_func):
-    if operator2 == "+":
-        second_result = num1 + num2
-        for operator3 in operators:
-            final_result = get_final_result(operator3, first_result, second_result)
-            print_func(final_result, nested_list, operator, operator2, operator3)
-
-    elif operator2 == "-":
-        second_result = num1 - num2
-        for operator3 in operators:
-            final_result = get_final_result(operator3, first_result, second_result)
-            print_func(final_result, nested_list, operator, operator2, operator3)
-
-    elif operator2 == "*":
-        second_result = num1 * num2
-        for operator3 in operators:
-            final_result = get_final_result(operator3, first_result, second_result)
-            print_func(final_result, nested_list, operator, operator2, operator3)
-
-    elif operator2 == "/":
-        numerator = num1
-        denominator = num2
-        for operator3 in operators:
-            final_result = final_result_division_right(operator3, numerator, denominator, first_result)
-            print_func(final_result, nested_list, operator, operator2, operator3)
-
-# print_func
-def left_to_right_solution(final_result, nested_list, op1, op2, op3):
-    if final_result == 24.0:
-        print(f"(({nested_list[0]} {op1} {nested_list[1]}) {op2} {nested_list[2]}) {op3} {nested_list[3]}")
-
-def left_and_right_group_solution(final_result, nested_list, op1, op2, op3):
-    if final_result == 24.0:
-        print(f"({nested_list[0]} {op1} {nested_list[1]}) {op3} ({nested_list[2]} {op2} {nested_list[3]})")
-
-def middle_group_left_solution(final_result, nested_list, op1, op2, op3):
-    if final_result == 24.0:
-        print(f"({nested_list[0]} {op2} ({nested_list[1]} {op1} {nested_list[2]})) {op3} {nested_list[3]}")
-        
-def middle_group_right_solution(final_result, nested_list, op1, op2, op3):
-    if final_result == 24.0:
-        print(f"{nested_list[0]} {op3} (({nested_list[1]} {op1} {nested_list[2]}) {op2} {nested_list[3]})")
-        
-def right_to_left_solution(final_result, nested_list, op1, op2, op3):
-    if final_result == 24.0:
-        print(f"{nested_list[0]} {op3} ({nested_list[1]} {op2} ({nested_list[2]} {op1} {nested_list[3]}))")
-
 print("\nSolution:")
-
 # Left to right
 for nested_list in random_list:
     for operator in operators:
@@ -153,19 +106,19 @@ for nested_list in random_list:
             first_result = nested_list[0] + nested_list[1]
             
             for operator2 in operators:
-                get_second_result_middle(operator, operator2, nested_list, nested_list[2], nested_list[3], left_and_right_group_solution)
+                get_second_result_middle(operator, operator2, nested_list, first_result, nested_list[2], nested_list[3], left_and_right_group_solution)
     
         elif operator == "-":
             first_result = nested_list[0] - nested_list[1]
             
             for operator2 in operators:
-                get_second_result_middle(operator, operator2, nested_list, nested_list[2], nested_list[3], left_and_right_group_solution)
+                get_second_result_middle(operator, operator2, nested_list, first_result, nested_list[2], nested_list[3], left_and_right_group_solution)
 
         elif operator == "*":
             first_result = nested_list[0] * nested_list[1]
             
             for operator2 in operators:
-                get_second_result_middle(operator, operator2, nested_list, nested_list[2], nested_list[3], left_and_right_group_solution)
+                get_second_result_middle(operator, operator2, nested_list, first_result, nested_list[2], nested_list[3], left_and_right_group_solution)
 
         elif operator == "/":
             numerator = nested_list[0]
