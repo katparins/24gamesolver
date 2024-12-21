@@ -42,40 +42,14 @@ while random_times <= cases:
     if lst not in random_list:
         random_list.append(lst[:])
         random_times += 1
-    
-def get_second_result_left(operator, operator2, nested_list, num1, num2, print_func):
-    if operator2 == "+":
-        second_result = num1 + num2
-        for operator3 in operators:
-            final_result = get_final_result(operator3, second_result, nested_list[3])
-            print_func(final_result, nested_list, operator, operator2, operator3)
-                                       
-    elif operator2 == "-":
-        second_result = num1 - num2
-        for operator3 in operators:
-            final_result = get_final_result(operator3, second_result, nested_list[3])
-            print_func(final_result, nested_list, operator, operator2, operator3)
 
-    elif operator2 == "*":
-        second_result = num1 * num2
-        for operator3 in operators:
-            final_result = get_final_result(operator3, second_result, nested_list[3])       
-            print_func(final_result, nested_list, operator, operator2, operator3)
-                
-    elif operator2 == "/":
-        numerator = num1
-        denominator = num2
-        for operator3 in operators:
-            final_result = final_result_division_right(operator3, numerator, denominator, nested_list[3])
-            print_func(final_result, nested_list, operator, operator2, operator3)
-            
 def get_second_result_middle(operator, operator2, nested_list, num1, num2, print_func):
     if operator2 == "+":
         second_result = num1 + num2
         for operator3 in operators:
             final_result = get_final_result(operator3, first_result, second_result)
             print_func(final_result, nested_list, operator, operator2, operator3)
-                                       
+
     elif operator2 == "-":
         second_result = num1 - num2
         for operator3 in operators:
@@ -85,38 +59,15 @@ def get_second_result_middle(operator, operator2, nested_list, num1, num2, print
     elif operator2 == "*":
         second_result = num1 * num2
         for operator3 in operators:
-            final_result = get_final_result(operator3, first_result, second_result)       
+            final_result = get_final_result(operator3, first_result, second_result)
             print_func(final_result, nested_list, operator, operator2, operator3)
-                
+
     elif operator2 == "/":
         numerator = num1
         denominator = num2
         for operator3 in operators:
             final_result = final_result_division_right(operator3, numerator, denominator, first_result)
             print_func(final_result, nested_list, operator, operator2, operator3)
-        
-def final_result_division_left(operation, a, b, c):
-    if operation == "+":
-        try:
-            final_result = ((c * b) + a) / b
-        except ZeroDivisionError:
-            final_result = -1
-    elif operation == "-":
-        try:
-            final_result = ((c * b) - a) / b
-        except ZeroDivisionError:
-            final_result = -1
-    elif operation == "*":
-        try:
-            final_result = (c * a) / b
-        except ZeroDivisionError:
-            final_result = -1
-    elif operation == "/":
-        try:
-            final_result = (c * b) / a
-        except ZeroDivisionError:
-            final_result = -1
-    return final_result
 
 # print_func
 def left_to_right_solution(final_result, nested_list, op1, op2, op3):
