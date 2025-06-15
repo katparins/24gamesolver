@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Poppins:wght@400;600&display=swap');
+
+html, body, [class*="st-"] {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f788cd;
+    color: #ffffff;
+}
+
+input[type="number"] {
+    background-color: #FFE4EC;
+    color: #333333;
+    padding: 20px;
+    font-weight: 600;
+    border: none;
+}
+
+div[data-testid="stNumberInput"] > div {
+    border: none;
+}
+
+.stButton > button {
+    background-color: transparent;
+    border-color: #FFE4EC;
+    border-width: 1.5px;
+    padding: 10px 24px;
+    border-radius: 20px;
+}
+
+.stButton > button:hover,
+.stButton > button:active,
+.stButton > button:focus {
+    background-color: transparent;
+    border-color: #ffffff !important;
+    box-shadow: none;
+    outline: none;
+}
+
+.message {
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 1rem;
+}
+
+a {
+    color: #ffe5f6 !important;
+    text-decoration: underline;
+}
