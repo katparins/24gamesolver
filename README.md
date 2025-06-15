@@ -47,7 +47,7 @@ You can find the original chaos preserved in the ['/trial-and-error'](./trial-an
 
 ---
 
-## 🙋‍♀️ Contact
+## 🙋🏻‍♀️ Contact
 
 Got questions or bugs? DM [@katparins](https://instagram.com/katparins) 🫶  
 Or open an issue right here on GitHub.
