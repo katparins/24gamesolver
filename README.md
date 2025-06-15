@@ -18,8 +18,8 @@ A web app that finds all possible ways to make **24** from four numbers — buil
 
 ## 🧪 Project History
 
-This solver began during my intro to programming class — written out of heartbreak, boredom, and pure determination. 
-The first version was over 4000 lines of chaotic 'for' loops. 
+This solver began during my intro to programming class — written out of heartbreak, boredom, and pure determination.  
+The first version was over 4000 lines of chaotic 'for' loops.  
 After some procrastination, healing, and real growth (both emotionally and technically), it's now refactored to ~300 clean lines.
 
 You can find the original chaos preserved in the ['/trial-and-error'](./trial-and-error) folder.
