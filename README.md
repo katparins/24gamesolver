@@ -34,7 +34,7 @@ You can find the original chaos preserved in the ['/trial-and-error'](./trial-an
 | 'helper.py'       | Helper functions                    |
 | 'print_func.py'   | Handles formatting / print logic    |
 | 'styles.css'      | Custom styling                      |
-| '/trial-and-error'| Archived experimental versions      |
+| 'trial-and-error/'| Archived experimental versions      |
 
 ---
 
