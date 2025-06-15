@@ -49,7 +49,7 @@ You can find the original chaos preserved in the ['/trial-and-error'](./trial-an
 
 ## 🙋🏻‍♀️ Contact
 
-Got questions or bugs? DM [@katparins](https://instagram.com/katparins) 🫶  
+Got questions or bugs? Email me at [pw2313@nyu.edu](mailto:pw2313@nyu.edu) 🫶  
 Or open an issue right here on GitHub.
 
 ---
