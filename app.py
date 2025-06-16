@@ -40,7 +40,7 @@ if solve_clicked:
 
     st.markdown("---")
     if solutions:
-        st.success("🎉 Yay! We found solutions:")
+        st.success("🎉 Yay! We've found solutions:")
         unique_solutions = list(set(solutions))
         for solution in unique_solutions:
             st.write(f"🌟 {solution}")
