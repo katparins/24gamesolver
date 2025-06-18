@@ -105,7 +105,7 @@ def get_second_result_right(operator, operator2, nested_list, num1, num2, print_
         numerator = num1
         denominator = num2
         for operator3 in operators:
-            final_result = final_result_division_right(operator3, numerator, denominator, nested_list[0])
+            final_result = final_result_division_left(operator3, numerator, denominator, nested_list[0])
             result = print_func(final_result, nested_list, operator, operator2, operator3)
             if result:
                 results.append(result)
@@ -166,7 +166,7 @@ def get_second_result_middle(operator, operator2, nested_list, first_result, num
         numerator = num1
         denominator = num2
         for operator3 in operators:
-            final_result = final_result_division_right(operator3, numerator, denominator, first_result)
+            final_result = final_result_division_left(operator3, numerator, denominator, first_result)
             result = print_func(final_result, nested_list, operator, operator2, operator3)
             if result:
                 results.append(result)
